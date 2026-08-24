@@ -1,0 +1,50 @@
+# Adaptive Local RAG — runtime config (8GB-friendly defaults)
+
+models:
+  embedding: BAAI/bge-small-en-v1.5  # 384-dim; prefer over BGE-base on 8GB RAM
+  embedding_dim: 384
+  reranker: BAAI/bge-reranker-base
+  llm: mistral:7b
+
+qdrant:
+  collection: legal_chunks
+  dense_name: dense
+  sparse_name: bm25
+  url: ${QDRANT_URL:http://localhost:6333}
+
+ollama:
+  host: ${OLLAMA_HOST:http://localhost:11434}
+  timeout_s: 600
+
+sqlite:
+  path: data/legal.db
+
+chunking:
+  strategy: semantic_parent_child
+  child_max_tokens: 512
+  parent_max_tokens: 2048
+
+retrieval:
+  hybrid_top_k: 20
+  rerank_top_k: 5
+  graph_hops: 1
+
+guards:
+  min_similarity: 0.45
+  router_ensemble_below: 0.7
+  abstain_message: "I couldn't find relevant information. Please rephrase your query."
+  ungrounded_message: "I cannot answer because a generated citation is not grounded in the retrieved documents."
+
+router:
+  factual_prototypes:
+    - "What is the termination clause?"
+    - "Who are the parties to this agreement?"
+    - "What is the governing law?"
+  comparative_prototypes:
+    - "Compare payment terms across contracts"
+    - "What is the difference between the two NDAs?"
+    - "How do the liability caps differ?"
+  aggregate_prototypes:
+    - "How many contracts mention indemnification?"
+    - "What is the total contract value?"
+    - "Average term length in months"

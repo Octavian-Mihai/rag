@@ -1,0 +1,10 @@
+{"query": "What is the yearly payment from Acme Corp to Beta LLC?", "relevant_contains": ["50000", "50,000"], "intent": "factual"}
+{"query": "Which state law governs the master services agreement?", "relevant_contains": ["New York"], "intent": "factual"}
+{"query": "How long is the initial term of the Beta LLC services agreement?", "relevant_contains": ["12 months"], "intent": "factual"}
+{"query": "What confidentiality term applies to Gamma Inc?", "relevant_contains": ["24 months"], "intent": "factual"}
+{"query": "Compare the liability caps in the service agreement and the NDA", "relevant_contains": ["100,000", "25,000"], "intent": "comparative"}
+{"query": "What is the difference in governing law between the NDA and the services agreement?", "relevant_contains": ["Delaware", "New York"], "intent": "comparative"}
+{"query": "Compare payment amounts across Acme Corp contracts", "relevant_contains": ["50,000", "120,000"], "intent": "comparative"}
+{"query": "What is the total contract value across extracted payment clauses?", "relevant_contains": ["total_amount"], "intent": "aggregate"}
+{"query": "How many contracts mention Acme Corp as a party?", "relevant_contains": ["Acme Corp"], "intent": "aggregate"}
+{"query": "What is the average term length in months in the clause store?", "relevant_contains": ["avg_term"], "intent": "aggregate"}

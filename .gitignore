@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+.env
+*.egg-info/
+.mypy_cache/
+.ruff_cache/
+.cursor/
+data/*.db
+data/bm25.json
+data/uploads/
+hf_cache/
+.cache/
+*.log
+.DS_Store

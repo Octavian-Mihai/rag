@@ -1,0 +1,1 @@
+"""Adaptive local RAG package."""

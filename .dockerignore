@@ -1,0 +1,7 @@
+__pycache__
+.venv
+.git
+*.pyc
+hf_cache
+data/*.db
+data/bm25.json
