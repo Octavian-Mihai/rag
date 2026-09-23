@@ -2,6 +2,12 @@
 
 Production-oriented **local** RAG (no cloud APIs). The MVP routes legal questions to hybrid, graph, or SQL retrieval, reranks with BGE, generates with Ollama Mistral-7B, and abstains on low similarity or ungrounded citations.
 
+## Screenshots
+
+| Overview | Query with grounded citations |
+| --- | --- |
+| ![App overview](docs/screenshots/overview.png) | ![Query answer with retrieved context](docs/screenshots/query_answer.png) |
+
 ## Stack
 - FastAPI + Streamlit
 - Qdrant hybrid search (dense BGE-small 384-d + hashed BM25 sparse)
