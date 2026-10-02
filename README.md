@@ -1,5 +1,7 @@
 # Adaptive Local RAG for Legal Document Intelligence
 
+See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for an architecture diagram.
+
 Production-oriented **local** RAG (no cloud APIs). The MVP routes legal questions to hybrid, graph, or SQL retrieval, reranks with BGE, generates with Ollama Mistral-7B, and abstains on low similarity or ungrounded citations.
 
 ## Screenshots
